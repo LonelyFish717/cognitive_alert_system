@@ -274,14 +274,21 @@ def main():
         st.caption("模型架构: ST-GNN + Gradient Boosting")
         st.caption("当前版本: v1.0.0 (CN)")
         
-        # 提供样本下载链接 (模拟)
-        with open("sample_data.csv", "rb") as f:
-            st.download_button(
-                label="📥 下载测试样本数据 (CSV)",
-                data=f,
-                file_name="sample_data.csv",
-                mime="text/csv"
-            )
+        # 下载示例数据
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        csv_path = os.path.join(current_dir, "sample_data.csv")
+        
+        try:
+            with open(csv_path, "rb") as f:
+                st.download_button(
+                    label="📥 下载示例数据 (CSV)",
+                    data=f,
+                    file_name="sample_data.csv",
+                    mime="text/csv",
+                    help="点击下载包含 PPG, EMG, EEG, SCR, ECG 信号的示例数据文件"
+                )
+        except FileNotFoundError:
+            st.error("⚠️ 示例数据文件丢失，请检查项目完整性。")
 
     # 主内容区
     # --------------------------------------------------------------------------
