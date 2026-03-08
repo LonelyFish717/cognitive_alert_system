@@ -1,0 +1,25 @@
+# Ignore system and environment files
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+*.so
+.env
+venv/
+env/
+.venv/
+
+# Streamlit
+.streamlit/
+*.log
+
+# Data (Exclude sensitive or large data)
+*.csv
+*.xlsx
+# Exception: Keep the sample data for users to try
+!sample_data.csv
+
+# Large Model Files (Optional: If > 100MB, use Git LFS)
+# *.pth
+# *.pkl
+# For this project, models are small enough to include
