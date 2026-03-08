@@ -14,7 +14,7 @@
 3.  **实时仪表盘**：可视化展示各生理指标（心率、皮电、脑电波段等）的实时变化。
 4.  **AI 教学助手**：集成 DeepSeek R1 大模型，根据学生的认知状态和实验内容，生成针对性的教学引导策略，并支持导出专业 PDF 报告。
 
-## �️ 技术栈
+## 🛠️ 技术栈
 
 *   **前端框架**: [Streamlit](https://streamlit.io/)
 *   **深度学习**: PyTorch (ST-GNN 实现)
@@ -23,7 +23,7 @@
 *   **大模型集成**: DeepSeek API (OpenAI SDK 兼容)
 *   **PDF 生成**: ReportLab (Platypus 引擎)
 
-## � 快速开始
+## 🚀 快速开始
 
 ### 1. 环境准备
 
@@ -81,6 +81,6 @@ streamlit run app.py
 1.  **特征提取层**: 使用预训练的 **ST-GNN** (Spatio-Temporal Graph Neural Network) 从原始多模态时间序列中提取高维时空特征向量。
 2.  **决策层**: 将提取的特征输入 **Gradient Boosting Classifier**，结合统计特征（如 HRV、Alpha/Beta 波比值等）进行最终的二分类（High Load / Low Load）。
 
-## � 许可证
+## 📜 许可证
 
 [MIT License](LICENSE)
