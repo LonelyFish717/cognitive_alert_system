@@ -200,7 +200,8 @@ client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 @st.cache_resource
 def get_models():
     """缓存加载模型，避免重复加载"""
-    return load_models('.')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    return load_models(current_dir)
 
 @st.cache_data
 def load_data_file(uploaded_file):
